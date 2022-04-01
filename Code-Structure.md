@@ -18,6 +18,7 @@ Low double,
 High double,
 Volume int
 );
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/100192162/161253853-50608e39-92d5-46a1-95de-57df704383a8.png">
 
 
 create table STOCK_COMPANIES
@@ -28,6 +29,8 @@ Sector varchar(21),
 Sub_industry varchar(21),
 Headquarter varchar(21)
 );
+
+<img width="473" alt="image" src="https://user-images.githubusercontent.com/100192162/161253923-2de0c15c-852a-4343-ae78-772007bcdf1e.png">
 
 
 Loading data in tables
@@ -79,6 +82,7 @@ and sd.trading_month = chv.min_month and sd.company_name = chv.company_name) sto
 and sd.trading_month = chv.max_month and sd.company_name = chv.company_name) stock_end 
 where stock_start.company_name = stock_end.company_name sort by growth_percent desc limit 5;
 
+<img width="313" alt="image" src="https://user-images.githubusercontent.com/100192162/161255625-d2620281-3f0f-42a3-9679-b09b7c8d2aa8.png">
 
 
 
@@ -110,6 +114,9 @@ step 3:
 
 select ig.state, sub_industry, ind_growth from industry_growth ig, (select state,max(ind_growth) max_growth          
 from industry_growth group by state) inn_ig where inn_ig.state = ig.state and ig.ind_growth = inn_ig.max_growth;
+
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/100192162/161256090-b2de769d-774f-4c38-9102-e5df84314f36.png">
+
 
 3)For each sector find the following.
 -------------------------------------
